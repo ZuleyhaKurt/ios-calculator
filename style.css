@@ -9,8 +9,8 @@
 .container{
 background-color: black;
 width: 30%;
-height:100vh ;
-margin:  auto;
+height:100vh;
+margin: 0 auto;
 border-radius: 10px;
 }
 .top{
@@ -81,7 +81,7 @@ height: 50%;
 @media screen and (min-width:700px) and (max-width:1200px){
     .container{
         width: 50%;
-        height: 100vh;
+        height:100vh;
     }
 }
 
