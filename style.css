@@ -20,15 +20,24 @@ border-radius: 10px;
 .main{
     height: 70%;
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: repeat(4, 24%) ;
+    grid-template-rows: repeat(5, 1fr) ;
     margin: 0;
     padding: 1rem;
     gap: 0.5rem;
 }
+.first,.second{
+    color: white;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 45px;
+    padding: 0 0.5rem;
+}
 .item{
     /* border: 1px solid red; */
-    /* padding: 1.5rem;
-    border-radius: 50%; */
+    /* padding: 1.5rem;*/
+    border-radius: 50%;
+    
 }
 .gri{
     background-color: #a5a5a5;
@@ -59,6 +68,7 @@ border-radius: 10px;
     grid-column-end: 3;
     border: 1px solid red; */
     grid-column: 1 / 3;
+    border-radius: 5rem;
 }
 .item:hover{
     opacity: 0.5;
@@ -84,3 +94,4 @@ height: 50%;
         width: 100%;
     }
 }
+
