@@ -60,9 +60,11 @@ main.addEventListener("click", (e) => {
        
     }
     if (e.target.classList.contains("dot")){
-        if(! (secondScreen.innerHTML == 0 || secondScreen.innerHTML == "") ){
-            secondScreen.innerHTML += e.target.textContent
+        if (secondScreen.innerText === "") {
+        } else if (secondScreen.innerText.includes(".")) {
+        } else {
+          secondScreen.innerText += ".";
         }
-    }
+      }
    
 })
