@@ -9,14 +9,18 @@ main.addEventListener("click", (e) => {
 
     if (e.target.classList.contains("num")) {
         if(secondScreen.innerHTML=="0" ){secondScreen.innerHTML=""}
+        
         secondScreen.innerHTML += e.target.textContent
         console.log(e.target.textContent)
     }
     if (e.target.classList.contains("op")) {
-        op=e.target.textContent
-        secondScreen.innerHTML +=op
-        firstScreen.innerHTML = secondScreen.innerHTML
-        secondScreen.innerHTML=""
+        op = e.target.textContent
+        
+        if (!(secondScreen.innerHTML == 0 || secondScreen.innerHTML == "")) {
+            secondScreen.innerHTML += op
+            firstScreen.innerHTML = secondScreen.innerHTML
+            secondScreen.innerHTML = ""
+        }
     }
     if(e.target.classList.contains("eq")){
         if (op == "+") {
@@ -48,5 +52,17 @@ main.addEventListener("click", (e) => {
     if(e.target.classList.contains("ac")){
         firstScreen.innerHTML = ""
         secondScreen.innerHTML=0
-     }
+    }
+    if(e.target.classList.contains("plusminus")){
+        if (!(secondScreen.innerHTML == 0 || secondScreen.innerHTML == "")) {
+            secondScreen.innerHTML=-secondScreen.innerHTML
+        }
+       
+    }
+    if (e.target.classList.contains("dot")){
+        if(! (secondScreen.innerHTML == 0 || secondScreen.innerHTML == "") ){
+            secondScreen.innerHTML += e.target.textContent
+        }
+    }
+   
 })
