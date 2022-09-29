@@ -1,0 +1,86 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin:0;
+   
+    font-family: Helvetica, sans-serif;
+
+}
+.container{
+background-color: black;
+width: 30%;
+height:100vh ;
+margin:  auto;
+border-radius: 10px;
+}
+.top{
+    height: 30%;
+    /* border: 1px solid red; */
+}
+.main{
+    height: 70%;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    margin: 0;
+    padding: 1rem;
+    gap: 0.5rem;
+}
+.item{
+    /* border: 1px solid red; */
+    /* padding: 1.5rem;
+    border-radius: 50%; */
+}
+.gri{
+    background-color: #a5a5a5;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 45px;
+}
+.turuncu{
+    background-color: #f1a33c;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 45px;
+}
+.kgri{
+    background-color: #333333;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 45px;
+}
+ .item2{
+    /* grid-column-start: 1;
+    grid-column-end: 3;
+    border: 1px solid red; */
+    grid-column: 1 / 3;
+}
+.item:hover{
+    opacity: 0.5;
+}
+
+.top .first ,
+.top .second{
+height: 50%;
+}
+@media screen and (min-width:700px) and (max-width:1200px){
+    .container{
+        width: 50%;
+    }
+}
+
+@media screen and (min-width:300px) and (max-width:700px) {
+    .container{
+        width: 90%;
+    }
+}
+@media screen and (min-width:0) and  (max-width:300px){
+    .container{
+        width: 100%;
+    }
+}
